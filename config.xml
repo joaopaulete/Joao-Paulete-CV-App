@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        versionCode = "1"
+        id        = "com.phonegap.mycvapp"
+        version   = "1.0.0">
+
+    <name>Joao Paulete CV App</name>
+
+    <description>
+        App desenvolvida no ambito do curso #beadeveloper na Alphappl - Code School
+    </description>
+
+    <author href="https://pt.linkedin.com/in/pauletejoao" email="guilherme.paulete@gmail.com">
+        Joao Paulete
+    </author>
+
+    <!--
+        If you do not want any permissions to be added to your app, add the
+        following tag to your config.xml; you will still have the INTERNET
+        permission on your app, which PhoneGap requires.
+    -->
+    <preference name="permissions"                value="none"/>
+    <!-- <preference name="phonegap-version" value="3.5.0" /> -->
+
+    <!-- Customize your app and platform with the preference element. -->
+    <preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->
+    <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
+    <preference name="fullscreen"                 value="true" />           <!-- all: hides the status bar at the top of the screen -->
+
+    <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
+    <!--
+        Define a specific version of PhoneGap to build into your app.
+        <preference name="phonegap-version"       value="3.5.0" />
+    -->
+
+    <!-- Plugins -->
+
+    <!-- Core plugins -->
+    <gap:plugin name="org.apache.cordova.battery-status" />
+    <gap:plugin name="org.apache.cordova.camera" />
+    <gap:plugin name="org.apache.cordova.media-capture" />
+    <gap:plugin name="org.apache.cordova.console" />
+    <gap:plugin name="org.apache.cordova.contacts" />
+    <gap:plugin name="org.apache.cordova.device" />
+    <gap:plugin name="org.apache.cordova.device-motion" />
+    <gap:plugin name="org.apache.cordova.device-orientation" />
+    <gap:plugin name="org.apache.cordova.dialogs" />
+    <gap:plugin name="org.apache.cordova.file" />
+    <gap:plugin name="org.apache.cordova.file-transfer" />
+    <gap:plugin name="org.apache.cordova.geolocation" />
+    <gap:plugin name="org.apache.cordova.globalization" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" />
+    <gap:plugin name="org.apache.cordova.media" />
+    <gap:plugin name="org.apache.cordova.network-information" />
+    <gap:plugin name="org.apache.cordova.splashscreen" />
+    <gap:plugin name="org.apache.cordova.vibration" />
+
+    <!-- Define app icon for each platform. -->
+    <icon src="icon.png" />
+    <icon src="ldpi.png"   platform="android"    qualifier="ldpi" />
+    <icon src="mdpi.png"   platform="android"    qualifier="mdpi" />
+    <icon src="hdpi.png"   platform="android"    qualifier="hdpi" />
+    <icon src="xhdpi.png"  platform="android"    qualifier="xhdpi" />
+     
+      
+<icon platform="winphone" width="44" height="44" src="Square44x44Logo.scale-100.png" />
+<icon platform="winphone" width="106" height="106" src="Square44x44Logo.scale-240.png" />
+<icon platform="winphone" width="150" height="150" src="Square150x150Logo.scale-100.png" />
+<icon platform="winphone" width="360" height="360" src="Square150x150Logo.scale-240.png" />
+<icon platform="winphone" width="71" height="71" src="Square71x71Logo.scale-100.png" />
+<icon platform="winphone" width="170" height="170" src="Square71x71Logo.scale-240.png" />
+<icon platform="winphone" width="310" height="150" src="Wide310x150Logo.scale-100.png" />
+<icon platform="winphone" width="744" height="360" src="Wide310x150Logo.scale-240.png" />
+
+    <!-- Define app splash screen for each platform. -->
+
+    <splash src="splash.png" />
+    <splash src="SplashScreenPhone.scale-240.png" platform="winphone" />
+    <splash src="sldpi.png" platform="android" qualifier="ldpi" />
+    <splash src="smdpi.png" platform="android" qualifier="mdpi" />
+    <splash src="shdpi.png" platform="android" qualifier="hdpi" />
+    <splash src="sxhdpi.png" platform="android" qualifier="xhdpi" />
+
+    <gap:splash src="SplashScreenPhone.scale-240.png"      gap:platform="winphone" />
+    
+    <splash platform="winphone" width="1152" height="1920" src="SplashScreenPhone.scale-240.png" />
+
+
+    <access origin="*"/>
+    <!-- Added the following intents to support the removal of whitelist code from base cordova to a plugin -->
+    <!-- Whitelist configuration. Refer to https://cordova.apache.org/docs/en/edge/guide_appdev_whitelist_index.md.html -->
+    <plugin name="cordova-plugin-whitelist" version="1" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="skype:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    
+    <platform name="winphone" />
+</widget>
